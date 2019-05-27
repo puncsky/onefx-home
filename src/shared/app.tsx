@@ -44,7 +44,7 @@ export class App extends Component<Props> {
           <ScrollToTop>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/doc" component={DocPage} />
+              <Route exact path="/doc.html" component={DocPage} />
               <Route component={NotFound} />
             </Switch>
           </ScrollToTop>

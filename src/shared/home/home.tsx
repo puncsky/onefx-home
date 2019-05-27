@@ -35,10 +35,10 @@ class Home extends PureComponent {
                 <Button
                   type="primary"
                   size="large"
-                  href="/doc"
+                  href="/doc.html"
                   onClick={e => {
                     e.preventDefault();
-                    history.push("/doc");
+                    history.push("/doc.html");
                   }}
                 >
                   {t("home.get_started")}

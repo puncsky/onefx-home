@@ -8,11 +8,16 @@ const port = config.get("server.port");
 
 async function generateStaticHtml(): Promise<void> {
   await startServer();
-  const res = await axios.get(`http://localhost:${port}/`);
-  const html = res.data;
+  let res = await axios.get(`http://localhost:${port}/`);
+  let html = res.data;
   fs.writeFileSync(`${__dirname}/../../dist/index.html`, html);
+
+  res = await axios.get(`http://localhost:${port}/doc.html`);
+  html = res.data;
+  fs.writeFileSync(`${__dirname}/../../dist/doc.html`, html);
 }
 
 generateStaticHtml().catch(err => {
-  window.console.error(`failed to generate static HTML: ${err}`);
+  // tslint:disable-next-line:no-console
+  console.error(`failed to generate static HTML: ${err}`);
 });

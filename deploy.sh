@@ -4,7 +4,7 @@
 set -e
 
 # build
-npm run bp
+# npm run bp
 
 # navigate into the build output directory
 cd ./dist
