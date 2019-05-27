@@ -1,110 +1,99 @@
+import Button from "antd/lib/button";
+import Col from "antd/lib/grid/col";
 import Row from "antd/lib/grid/row";
-import Icon from "antd/lib/icon";
 import Layout from "antd/lib/layout";
-import gql from "graphql-tag";
 // @ts-ignore
 import { assetURL } from "onefx/lib/asset-url";
+// @ts-ignore
+import { t } from "onefx/lib/iso-i18n";
 // @ts-ignore
 import { styled } from "onefx/lib/styletron-react";
 import React from "react";
 import { PureComponent } from "react";
-import { Query, QueryResult } from "react-apollo";
+import { Flex } from "../common/flex";
 import { colors } from "../common/styles/style-color";
 import { ContentPadding } from "../common/styles/style-padding";
-
-const GET_HEALTH = gql`
-  {
-    health
-  }
-`;
 
 export class Home extends PureComponent {
   public render(): JSX.Element {
     return (
-      <ContentPadding>
-        <Layout tagName={"main"}>
-          <Layout.Content
-            tagName={"main"}
-            style={{ backgroundColor: "#fff", padding: "32px" }}
-          >
-            <Row type="flex" justify="center">
-              <OneFxIcon src={assetURL("/favicon.svg")} />
+      <Layout tagName={"main"}>
+        <Layout.Content
+          tagName={"main"}
+          style={{ backgroundColor: colors.nav01 }}
+        >
+          <ContentPadding>
+            <Row style={{ margin: "80px 0" }}>
+              <Col md={12} xs={24}>
+                <HeroH1>{t("home.title")}</HeroH1>
+                <HeroP>{t("home.desc")}</HeroP>
+                <Button
+                  type="primary"
+                  size="large"
+                  href="https://github.com/puncsky/web-onefx-boilerplate"
+                >
+                  {t("home.get_started")}
+                </Button>
+              </Col>
+              <Col md={12} xs={24}>
+                <Flex center={true} width="100%">
+                  <Img
+                    src={assetURL("/building-website.svg")}
+                    alt="building apps with OneFx"
+                  />
+                </Flex>
+              </Col>
             </Row>
-            <Row type="flex" justify="center">
-              <Title>OneFx</Title>
-            </Row>
-            <Row type="flex" justify="center">
-              <p>Building Web & Mobile Apps with Speed & Quality</p>
-            </Row>
-            <Row type="flex" justify="center">
-              <a
-                href="/api-gateway/"
-                target="_blank"
-                rel="noreferrer nofollow noopener"
-              >
-                GraphQL Endpoint
-              </a>
-            </Row>
-            <Row type="flex" justify="center">
-              <Query query={GET_HEALTH} ssr={false} fetchPolicy="network-only">
-                {({
-                  loading,
-                  error,
-                  data
-                }: QueryResult<{ health: string }>) => {
-                  if (loading) {
-                    return (
-                      <div>
-                        <Icon type="loading" /> Checking Status
-                      </div>
-                    );
-                  }
-                  if (error) {
-                    return (
-                      <div>
-                        <Icon
-                          type="close-circle"
-                          theme="twoTone"
-                          twoToneColor={colors.error}
-                        />{" "}
-                        Not OK
-                      </div>
-                    );
-                  }
+          </ContentPadding>
+        </Layout.Content>
 
-                  return (
-                    <div>
-                      <Icon
-                        type="check-circle"
-                        theme="twoTone"
-                        twoToneColor={colors.success}
-                      />{" "}
-                      {data && data.health}
-                    </div>
-                  );
-                }}
-              </Query>
+        <Layout.Content tagName={"main"}>
+          <ContentPadding>
+            <Row style={{ margin: "80px 0" }}>
+              <Col md={12} xs={24}>
+                <Flex center={true} width="100%">
+                  <Img
+                    src={assetURL("/startup.svg")}
+                    alt="building apps with OneFx"
+                  />
+                </Flex>
+              </Col>
+
+              <Col md={12} xs={24}>
+                <H2>{t("home.section1.title")}</H2>
+                <P
+                  dangerouslySetInnerHTML={{ __html: t("home.section1.desc") }}
+                />
+              </Col>
             </Row>
-          </Layout.Content>
-        </Layout>
-      </ContentPadding>
+          </ContentPadding>
+        </Layout.Content>
+      </Layout>
     );
   }
 }
 
-const OneFxIcon = styled("img", {
-  width: "150px",
-  height: "150px",
-  boxSizing: "border-box",
-  border: "5px white solid",
-  borderRadius: "50%",
-  overflow: "hidden",
-  boxShadow: "0 5px 15px 0px rgba(0,0,0,0.6)",
-  transform: "translatey(0px)",
-  animation: "float 6s ease-in-out infinite"
+const Img = styled("img", {
+  width: "100%",
+  maxHeight: "450px"
 });
 
-const Title = styled("h1", {
-  color: colors.secondary,
-  margin: "16px"
+const HeroH1 = styled("h1", {
+  color: colors.white,
+  fontSize: "48px",
+  margin: 0
+});
+
+const HeroP = styled("p", {
+  color: colors.white,
+  fontSize: "18px",
+  margin: "36px 0"
+});
+
+const H2 = styled("h2", {
+  fontSize: "34px"
+});
+
+const P = styled("div", {
+  fontSize: "18px"
 });

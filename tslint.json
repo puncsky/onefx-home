@@ -10,6 +10,16 @@
     "node_modules/tslint-require-connnect-typing"
   ],
   "rules": {
+    "react-no-dangerous-html": [
+      true,
+      [
+        {
+          "file": "src/shared/home/home.tsx",
+          "method": "render",
+          "comment": "Usage has been approved by Tian on 2019-05-27 02:18"
+        }
+      ]
+    ],
     "no-null-keyword": false,
     "no-for-in-array": [false],
     "restrict-plus-operands": [false],
