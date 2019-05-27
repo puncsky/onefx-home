@@ -10,12 +10,17 @@ import { t } from "onefx/lib/iso-i18n";
 import { styled } from "onefx/lib/styletron-react";
 import React from "react";
 import { PureComponent } from "react";
+import { withRouter } from "react-router";
 import { Flex } from "../common/flex";
 import { colors } from "../common/styles/style-color";
 import { ContentPadding } from "../common/styles/style-padding";
 
-export class Home extends PureComponent {
+// @ts-ignore
+@withRouter
+class Home extends PureComponent {
   public render(): JSX.Element {
+    // @ts-ignore
+    const { history } = this.props;
     return (
       <Layout tagName={"main"}>
         <Layout.Content
@@ -30,7 +35,11 @@ export class Home extends PureComponent {
                 <Button
                   type="primary"
                   size="large"
-                  href="https://github.com/puncsky/web-onefx-boilerplate"
+                  href="/doc"
+                  onClick={e => {
+                    e.preventDefault();
+                    history.push("/doc");
+                  }}
                 >
                   {t("home.get_started")}
                 </Button>
@@ -72,6 +81,8 @@ export class Home extends PureComponent {
     );
   }
 }
+
+export { Home };
 
 const Img = styled("img", {
   width: "100%",

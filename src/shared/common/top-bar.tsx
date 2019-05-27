@@ -58,11 +58,16 @@ export class TopBar extends Component<{}, State> {
   };
 
   public renderMenu = () => {
-    return [
-      <A key={0} href="/" onClick={this.hideMobileMenu}>
-        {t("topbar.home")}
-      </A>
-    ];
+    return (
+      <>
+        <StyledLink to="/" onClick={this.hideMobileMenu}>
+          {t("topbar.home")}
+        </StyledLink>
+        <StyledLink to="/doc/" onClick={this.hideMobileMenu}>
+          {t("topbar.doc")}
+        </StyledLink>
+      </>
+    );
   };
 
   public renderMobileMenu = () => {
@@ -86,7 +91,7 @@ export class TopBar extends Component<{}, State> {
           <Flex>
             <Logo />
             <CommonMargin />
-            <BrandText href="/">{t("topbar.brand")}</BrandText>
+            <BrandText to="/">{t("topbar.brand")}</BrandText>
           </Flex>
           <Flex>
             <Menu>{this.renderMenu()}</Menu>
@@ -182,14 +187,14 @@ function CrossBtn({
   return <Styled>{children}</Styled>;
 }
 
-const LogoWrapper = styled("a", {
+const LogoWrapper = styled(Link, {
   width: `${TOP_BAR_HEIGHT}px`,
   height: `${TOP_BAR_HEIGHT}px`
 });
 
 function Logo(): JSX.Element {
   return (
-    <LogoWrapper href="/">
+    <LogoWrapper to="/">
       <Icon url={assetURL("/favicon.svg")} />
     </LogoWrapper>
   );
@@ -211,8 +216,9 @@ const menuItem = {
     borderBottom: "1px #EDEDED solid"
   }
 };
+// @ts-ignore
 const A = styled("a", menuItem);
-const BrandText = styled("a", {
+const BrandText = styled(Link, {
   ...menuItem,
   marginLeft: 0,
   [media.palm]: {}

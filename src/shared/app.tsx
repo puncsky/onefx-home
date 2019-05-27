@@ -20,6 +20,7 @@ import { ScrollToTop } from "./common/scroll-top";
 import { colors } from "./common/styles/style-color";
 import { fonts } from "./common/styles/style-font";
 import { TopBar } from "./common/top-bar";
+import { DocPage } from "./home/doc-page";
 import { Home } from "./home/home";
 
 type Props = {
@@ -43,6 +44,7 @@ export class App extends Component<Props> {
           <ScrollToTop>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/doc" component={DocPage} />
               <Route component={NotFound} />
             </Switch>
           </ScrollToTop>

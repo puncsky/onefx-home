@@ -18,3 +18,20 @@
     transform: translatey(0px);
   }
 }
+
+code {
+  font-family: Menlo-Regular, monospace;
+  background: white;
+  border: solid 1px #dedede;
+  padding: 0.2em 0.5em;
+  font-size: 0.9em;
+}
+
+code[class^="language-"] {
+  display: block !important;
+  background: white;
+  border: solid 1px #dedede;
+  padding: 0.7em 1em;
+  font-size: 0.9em;
+  overflow: scroll;
+}
