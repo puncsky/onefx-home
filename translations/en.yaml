@@ -18,3 +18,4 @@ home.section1.desc: >-
     <li><strong>Tightly Secure</strong> OneFx takes security seriously and helps developers avoid many common security mistakes.</li>
   </ul>
 topbar.doc: DOCUMENT
+topbar.contributing: CONTRIBUTING

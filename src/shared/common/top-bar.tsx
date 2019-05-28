@@ -66,6 +66,9 @@ export class TopBar extends Component<{}, State> {
         <StyledLink to="/doc.html" onClick={this.hideMobileMenu}>
           {t("topbar.doc")}
         </StyledLink>
+        <StyledLink to="/contributing.html" onClick={this.hideMobileMenu}>
+          {t("topbar.contributing")}
+        </StyledLink>
       </>
     );
   };

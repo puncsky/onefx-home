@@ -379,7 +379,7 @@ https://github.com/puncsky/web-onefx-boilerplate.git
 4. install [VS Code](https://code.visualstudio.com/) and open WSL terminal with ctrl + \` . Not sure about WSL terminal? Go to [this post](https://blogs.msdn.microsoft.com/commandline/2017/10/27/running-node-js-on-wsl-from-visual-studio-code/).
 `;
 
-const md = new MarkdownIt({
+export const md = new MarkdownIt({
   html: true,
   linkify: true,
   typographer: true,

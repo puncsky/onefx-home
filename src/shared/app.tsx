@@ -22,6 +22,7 @@ import { fonts } from "./common/styles/style-font";
 import { TopBar } from "./common/top-bar";
 import { DocPage } from "./home/doc-page";
 import { Home } from "./home/home";
+import { Contributing } from "./home/contributing";
 
 type Props = {
   googleTid: string;
@@ -45,6 +46,7 @@ export class App extends Component<Props> {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/doc.html" component={DocPage} />
+              <Route exact path="/contributing.html" component={Contributing} />
               <Route component={NotFound} />
             </Switch>
           </ScrollToTop>

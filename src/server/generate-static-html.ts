@@ -8,13 +8,17 @@ const port = config.get("server.port");
 
 async function generateStaticHtml(): Promise<void> {
   const server = await startServer();
-  let res = await axios.get(`http://localhost:${port}/`);
-  let html = res.data;
-  fs.writeFileSync(`${__dirname}/../../dist/index.html`, html);
 
-  res = await axios.get(`http://localhost:${port}/doc.html`);
-  html = res.data;
-  fs.writeFileSync(`${__dirname}/../../dist/doc.html`, html);
+  await Promise.all(
+    ["", "doc.html", "contributing.html"].map(async route => {
+      const res = await axios.get(`http://localhost:${port}/${route}`);
+      const html = res.data;
+      fs.writeFileSync(
+        `${__dirname}/../../dist/${route || "index.html"}`,
+        html
+      );
+    })
+  );
   server.close();
 }
 
