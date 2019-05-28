@@ -63,7 +63,7 @@ export class TopBar extends Component<{}, State> {
         <StyledLink to="/" onClick={this.hideMobileMenu}>
           {t("topbar.home")}
         </StyledLink>
-        <StyledLink to="/doc/" onClick={this.hideMobileMenu}>
+        <StyledLink to="/doc.html" onClick={this.hideMobileMenu}>
           {t("topbar.doc")}
         </StyledLink>
       </>
