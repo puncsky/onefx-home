@@ -20,9 +20,9 @@ import { ScrollToTop } from "./common/scroll-top";
 import { colors } from "./common/styles/style-color";
 import { fonts } from "./common/styles/style-font";
 import { TopBar } from "./common/top-bar";
+import { Contributing } from "./home/contributing";
 import { DocPage } from "./home/doc-page";
 import { Home } from "./home/home";
-import { Contributing } from "./home/contributing";
 
 type Props = {
   googleTid: string;
