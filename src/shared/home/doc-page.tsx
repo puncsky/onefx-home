@@ -65,7 +65,8 @@ NODE_ENV=production npm run start
 * \`npm run kill\`: kill the node server occupying the port 4100.
 
 ## Architecture
-[image:https://res.cloudinary.com/dohtidfqh/image/upload/v1546379050/web-guiguio/onefx-architecture.png]Onefx Architecture
+
+![Onefx Architecture](https://res.cloudinary.com/dohtidfqh/image/upload/v1546379050/web-guiguio/onefx-architecture.png)
 
 \`\`\`txt
 .
