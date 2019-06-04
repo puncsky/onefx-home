@@ -399,7 +399,7 @@ export const md = new MarkdownIt({
   .use(markMiddleware)
   .use(markdownItTocAndAnchor, {
     anchorLinkBefore: false,
-    anchorLinkSymbol: "",
+    anchorLinkSymbol: "#",
     anchorLinkSymbolClassName: "fas fa-link"
   });
 

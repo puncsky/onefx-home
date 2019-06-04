@@ -40,3 +40,35 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+h2:before {
+  content: "\A";
+  width: 8px;
+  height: 20px;
+  background: #de4c4f;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  > a.markdownIt-Anchor > span {
+    color: transparent;
+  }
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover {
+  > a.markdownIt-Anchor > span {
+    color: #dfe3e6;
+  }
+  > a.markdownIt-Anchor:hover > span {
+    color: #de4c4f;
+  }
+}

@@ -264,16 +264,34 @@ The \`index.js\` should always export the main component. This file should also 
 
 ### 2. Use lowercase kebab-case filenames
 
-| ❌ Bad | ✅ Good |
-| ---      | ---      |
-| \`MyAwesomeComponent.js\` <br/> \`My-Awesome-Component.js\` <br/>\`my_awesome_component.js\` | \`my-awesome-component.js\` |
+❌ Bad 
+
+\`\`\`txt
+MyAwesomeComponent.js
+My-Awesome-Component.js
+my_awesome_component.js
+\`\`\`
+
+✅ Good 
+
+\`\`\`txt
+my-awesome-component.js
+\`\`\`
 
 ### 3. Prefer named exports over default exports
 
-| ❌ Bad | ✅ Good |
-| ---      | ---      |
-| \`export default function() {}\` | \`// exports a function declared earlier\` <br/> \`export { myFunction };\` <br/>\`// exports a constant\` <br/> \`export const foo = "bar";\` |
+❌ Bad 
 
+\`export default function() {}\`
+
+✅ Good 
+
+\`\`\`jsx
+// exports a function declared earlier
+export { myFunction };
+// exports a constant
+export const foo = "bar";
+\`\`\`
 
 ## Effective refactoring
 
@@ -293,6 +311,23 @@ Use \`px\`.
 
 - Avoid using \`pt\`. 
 - Avoid using \`rem\`. In most cases, users want to see more contents instead of larger fonts with larger screens.
+
+
+
+# Design Principles
+
+## Empathy / Perspective-taking is the most important. 
+## Keep elements consistent.
+## Insist on the Highest Standards.
+
+Detail-oriented
+
+## Check i18n.
+
+## Check accessibility.
+
+
+
 `;
 
 export function Contributing(): JSX.Element {
