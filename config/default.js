@@ -29,7 +29,7 @@ module.exports = {
     }
   },
   analytics: {
-    googleTid: "TODO: replace with your googleTid"
+    googleTid: "UA-43072488-3"
   },
   csp: {
     "default-src": ["none"],
