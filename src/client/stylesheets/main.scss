@@ -45,7 +45,7 @@ h2:before {
   content: "\A";
   width: 8px;
   height: 20px;
-  background: #de4c4f;
+  background: #fbb03b;
   display: inline-block;
   margin: 0 10px 0 0;
 }
@@ -69,6 +69,6 @@ h5:hover {
     color: #dfe3e6;
   }
   > a.markdownIt-Anchor:hover > span {
-    color: #de4c4f;
+    color: #fbb03b;
   }
 }

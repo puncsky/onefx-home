@@ -45,7 +45,7 @@ To run your project in development mode, run:
 npm run watch
 \`\`\`
 
-The development site will be available at [http://localhost:4000](http://localhost:4000).
+The development site will be available at [http://localhost:5000](http://localhost:5000).
 
 ### Production Mode
 It’s sometimes useful to run a project in production mode, for example, to check bundle size or to debug a production-only issue. To run your project in production mode locally, run:
@@ -63,6 +63,12 @@ NODE_ENV=production npm run start
 * \`npm run lint\`: run the linter
 * \`npm run flow\`: run the flow type check
 * \`npm run kill\`: kill the node server occupying the port 4100.
+
+## Code Styles
+
+We use prettier, tslint, and editorconfig to enforce consistent styles across the whole project, so that we will not bikeshed on coding styles in the code review.
+
+However, please visit our [Contributing Code](/contributing.html) before submitting your code. 
 
 ## Architecture
 
@@ -86,6 +92,11 @@ NODE_ENV=production npm run start
 ├── renovate.json           // renovate bot to automate dependency bumps
 ├── server.ts               // project entry
 ├── src                               // source code
+│   ├── api-gateway                   // APIs server defined in GraphQL for the clients to call
+│   │   ├── api-gateway.graphql
+│   │   ├── api-gateway.ts
+│   │   └── resolvers
+│   │       └── meta-resolver.ts
 │   ├── client                        // browser-side source code
 │   │   ├── javascripts
 │   │   │   └── main.tsx
@@ -165,6 +176,7 @@ export default <Panel>Hello</Panel>;
 \`\`\`
 
 ## Routing
+
 server-side routing is using [koa-router](https://github.com/alexmingoia/koa-router) and located in \`./src/server/server-routes.js\`. The basic usage is:
 
 \`\`\`js
@@ -195,7 +207,91 @@ client-side routing is using [react-router v4](https://reacttraining.com/react-r
 </Switch>
 \`\`\`
 
+## Fetching data
+
+We use Apollo Graphql and TypeGraphQL for universal rendering with React. For detailed documentation, please visit:
+
+1. [Define GraphQL schemas in TypeScript](https://typegraphql.ml/docs/getting-started.html)
+2. [Learn how to fetch data with the Apollo Query component](https://www.apollographql.com/docs/tutorial/queries/) 
+
+### Make a query
+
+In \`src/api-gateway/resolvers/\`, define a new resolver and method. Take the meta data endpoint of the server health for example. 
+
+\`\`\`js
+import { Query, Resolver, ResolverInterface } from "type-graphql";
+
+@Resolver(_ => String)
+export class MetaResolver implements ResolverInterface<() => String> {
+  @Query(_ => String, { description: "is the server healthy?" })
+  public async health(): Promise<string> {
+    return "OK";
+  }
+}
+\`\`\`
+
+and then in \`api-gateway.ts\`, mount the resolver.
+
+\`\`\`js
+  const resolvers = [MetaResolver];
+\`\`\`
+
+Now the server is ready and you can call the \`health\` endpoint at [https://localhost:5000/api-gateway/](https://localhost:5000/api-gateway/).
+
+The next step is to call it from the React component.
+
+
+\`\`\`js
+const GET_HEALTH = gql\`
+  {
+    health
+  }
+\`;
+\`\`\`
+
+\`\`\`<js></js>
+<Query query={GET_HEALTH} ssr={false} fetchPolicy="network-only">
+   {({
+     loading,
+     error,
+     data
+   }: QueryResult<{ health: string }>) => {
+     if (loading) {
+       return (
+         <div>
+           <Icon type="loading" /> Checking Status
+         </div>
+       );
+     }
+     if (error) {
+       return (
+         <div>
+           <Icon
+             type="close-circle"
+             theme="twoTone"
+             twoToneColor={colors.error}
+           />{" "}
+           Not OK
+         </div>
+       );
+     }
+
+     return (
+       <div>
+         <Icon
+           type="check-circle"
+           theme="twoTone"
+           twoToneColor={colors.success}
+         />{" "}
+         {data && data.health}
+       </div>
+     );
+   }}
+</Query>
+\`\`\`
+
 ## Internationalization
+
 Onefx reads translations from \`./translations\` directory. Please create a file there named with a corresponding locale, for example, \`en.yaml\`. And then add an entry
 
 \`\`\`yaml
@@ -315,29 +411,29 @@ Vision: Onefx = fusionjs-like presentation layer + django-like admin portal + re
 
 1. MVP
 	1. Getting started
-		1. Create a project
-		2. Run your project
+		1. [x] Create a project
+		2. [x] Run your project
 		3. Framework Comparison
-		4. Coding Styles
+		4. [x] Coding Styles
 	2. Guides
-		1. State management
-		2. styling
-			1. import styles
-			2. modular styles (now we have global root provider dependency on styletron)
-		3. Routing
+		1. [x] State management
+		2. [x] styling
+			1. [x] import styles
+			2. [x] modular styles (now we have global root provider dependency on styletron)
+		3. [x] Routing
 		4. Fetching data
 		5. Forms
-		6. Internationalization
-		7. testing
+		6. [x] Internationalization
+		7. [x] testing
 		8. typing
-		9. security
+		9. [x] security
 		10. Universal rendering
 		11. Server code
 		12. Performance
 		13. automatic code splitting
 		14. debugging
-		15. Static assets
-		16. Configuration
+		15. [x] Static assets
+		16. [x] Configuration
 		17. Working with Secrets
 2. ver 1.0.0 Web
 	1. yarn create

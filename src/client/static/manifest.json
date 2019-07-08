@@ -1,6 +1,6 @@
 {
-  "short_name": "TODO_boilerplate",
-  "name": "TODO_boilerplate",
+  "short_name": "OneFx",
+  "name": "Building web & mobile apps with speed & quality",
   "icons": [
     {
       "src": "favicon.svg",
@@ -10,6 +10,6 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#de4c4f",
+  "theme_color": "#FBB03B",
   "background_color": "#f3f3f3"
 }
