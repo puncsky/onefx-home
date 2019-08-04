@@ -312,7 +312,7 @@ Use \`px\`.
 
 
 
-## UX Design Principles
+# UX Design Principles
 
 * Empathy / Perspective-taking is the most important. 
 * Keep elements consistent.

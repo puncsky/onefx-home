@@ -2,6 +2,8 @@
 // @ts-ignore
 import window from "global";
 // @ts-ignore
+import loadScript from "load-script";
+// @ts-ignore
 import { t } from "onefx/lib/iso-i18n";
 // @ts-ignore
 import Helmet from "onefx/lib/react-helmet";
@@ -74,7 +76,6 @@ function ArticleHeader({
       {enableToc && (
         <Helmet>
           <style type="text/css">{DOC_STYLES}</style>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" />
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css"
@@ -110,14 +111,20 @@ export class Doc extends PureComponent<PropType> {
       return;
     }
 
-    window.tocbot.init({
-      // Where to render the table of contents.
-      tocSelector: ".js-toc",
-      // Where to grab the headings to build the table of contents.
-      contentSelector: "article",
-      // Which headings to grab inside of the contentSelector element.
-      headingSelector: "h2, h3"
-    });
+    loadScript(
+      "https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js",
+      () => {
+        window.tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: ".js-toc",
+          // Where to grab the headings to build the table of contents.
+          contentSelector: "article",
+          // Which headings to grab inside of the contentSelector element.
+          headingSelector: "h1, h2, h3",
+          collapseDepth: 2
+        });
+      }
+    );
   }
 
   public render(): JSX.Element {

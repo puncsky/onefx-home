@@ -150,6 +150,7 @@
     "is-browser": "2.1.0",
     "isomorphic-unfetch": "3.0.0",
     "jsonwebtoken": "8.5.1",
+    "load-script": "^1.0.0",
     "markdown-it": "^8.4.2",
     "markdown-it-mark": "^2.0.0",
     "markdown-it-toc-and-anchor": "^4.2.0",

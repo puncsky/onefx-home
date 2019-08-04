@@ -1,8 +1,8 @@
 // @ts-ignore
 import { styled } from "onefx/lib/styletron-react";
-import React from "react";
+import React, { ReactNode } from "react";
 
-type Element = JSX.Element | string | boolean | void;
+type Element = ReactNode;
 
 type PropTypes = {
   children?: Array<Element> | Element;
@@ -14,7 +14,7 @@ type PropTypes = {
   backgroundColor?: string;
   justifyContent?: string;
   height?: string;
-  media?: { [key: string]: string };
+  media?: { [key: string]: { [key: string]: string } };
   alignContent?: string;
 } & React.CSSProperties;
 

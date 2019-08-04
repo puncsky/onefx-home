@@ -26,13 +26,13 @@ export function Head({ locale }: { locale: string }): JSX.Element {
       link={[
         // PWA & mobile
         { rel: "manifest", href: "/manifest.json" },
-        { rel: "apple-touch-icon", href: "/favicon.svg" },
+        { rel: "apple-touch-icon", href: assetURL("/favicon.svg") },
 
         {
           rel: "icon",
           type: "image/png",
           sizes: "any",
-          href: assetURL("/favicon.svg")
+          href: assetURL("/favicon.png")
         },
 
         // styles
