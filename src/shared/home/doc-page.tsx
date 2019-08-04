@@ -9,8 +9,6 @@ import { Doc } from "./doc";
 
 const DOC = `
 
-@[toc]
-
 # Getting Started
 
 OneFx is a full-stack framework for building web apps. Here are the features you’ll find in Onefx.js:
@@ -495,8 +493,8 @@ export const md = new MarkdownIt({
   .use(markMiddleware)
   .use(markdownItTocAndAnchor, {
     anchorLinkBefore: false,
-    anchorLinkSymbol: "#",
-    anchorLinkSymbolClassName: "fas fa-link"
+    anchorLinkSymbol: "",
+    anchorLinkSymbolClassName: "markdownIt-Link-Anchor"
   });
 
 export function DocPage(): JSX.Element {

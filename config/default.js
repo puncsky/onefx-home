@@ -41,7 +41,8 @@ module.exports = {
       "https://use.fontawesome.com/releases/v5.0.13/",
       "https://translate.googleapis.com/",
       "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/",
-      "https://checkout.stripe.com/v3/"
+      "https://checkout.stripe.com/v3/",
+      "https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css"
     ],
     "frame-src": [
       "https://www.slideshare.net/",
@@ -64,7 +65,8 @@ module.exports = {
       "https://translate.google.com/",
       "https://translate.googleapis.com/",
       "https://cdn.jsdelivr.net/particles.js/2.0.0/",
-      "https://checkout.stripe.com/checkout.js"
+      "https://checkout.stripe.com/checkout.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"
     ]
   },
   apiGatewayUrl: "http://localhost:4009/api-gateway/"

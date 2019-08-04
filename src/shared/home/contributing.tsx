@@ -4,8 +4,6 @@ import { md } from "./doc-page";
 
 const CONTRIBUTING = `
 
-@[toc]
-
 # Code Review Checklist
 
 ## Avoid Bad Practices
@@ -314,17 +312,14 @@ Use \`px\`.
 
 
 
-# Design Principles
+## UX Design Principles
 
-## Empathy / Perspective-taking is the most important. 
-## Keep elements consistent.
-## Insist on the Highest Standards.
-
-Detail-oriented
-
-## Check i18n.
-
-## Check accessibility.
+* Empathy / Perspective-taking is the most important. 
+* Keep elements consistent.
+* Insist on the Highest Standards.
+* Detail-oriented
+    * Check i18n.
+    * Check accessibility.
 
 
 
