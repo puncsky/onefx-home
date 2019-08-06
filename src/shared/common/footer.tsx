@@ -1,4 +1,5 @@
-// @ts-ignore
+import { assetURL } from "onefx/lib/asset-url";
+import { t } from "onefx/lib/iso-i18n";
 import { styled } from "onefx/lib/styletron-react";
 import React from "react";
 import { Flex } from "./flex";
@@ -16,7 +17,22 @@ export function Footer(): JSX.Element {
   return (
     <Align>
       <Flex>{`Copyright © ${new Date().getFullYear()}`}</Flex>
-      <Flex>Built with ❤️ in San Francisco</Flex>
+      <div>
+        <div
+          dangerouslySetInnerHTML={{ __html: t("footer.built_with_love") }}
+        />{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://onefx.js.org"
+        >
+          <img
+            alt="built with onefx"
+            style={{ height: "20px" }}
+            src={assetURL("/built-with-onefx.svg")}
+          />
+        </a>
+      </div>
     </Align>
   );
 }

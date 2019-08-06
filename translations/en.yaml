@@ -19,3 +19,4 @@ home.section1.desc: >-
   </ul>
 topbar.doc: DOCUMENT
 topbar.contributing: CONTRIBUTING
+footer.built_with_love: 'Built with <span style="font-size: 12px; color: #F27788;">♥</span> in San Francisco'

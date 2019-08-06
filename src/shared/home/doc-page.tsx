@@ -20,7 +20,7 @@ OneFx is a full-stack framework for building web apps. Here are the features you
 ## Create a project
 
 \`\`\`bash
-git clone git@github.com:puncsky/web-onefx-boilerplate.git my-awesome-project
+git clone https://github.com/puncsky/web-onefx-boilerplate.git my-awesome-project
 \`\`\`
 
 ## Run your project

@@ -16,7 +16,7 @@ import { fullOnPalm, media } from "../common/styles/style-media";
 import { ContentPadding } from "../common/styles/style-padding";
 
 const DOC_STYLES = `
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
   padding: 52px 0 8px;
   margin: -52px 0 0 !important;
   -webkit-background-clip: content-box;

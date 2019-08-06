@@ -164,7 +164,14 @@ function HamburgerBtn({
     cursor: "pointer",
     justifyContent: "center"
   });
-  return <Styled onClick={onClick}>{children}</Styled>;
+  return (
+    <Styled
+      // @ts-ignore
+      onClick={onClick}
+    >
+      {children}
+    </Styled>
+  );
 }
 
 function CrossBtn({
@@ -221,6 +228,7 @@ const menuItem = {
 };
 // @ts-ignore
 const A = styled("a", menuItem);
+// @ts-ignore
 const BrandText = styled(Link, {
   ...menuItem,
   marginLeft: 0,
