@@ -472,6 +472,34 @@ https://github.com/puncsky/web-onefx-boilerplate.git
 \`\`\`
 
 4. install [VS Code](https://code.visualstudio.com/) and open WSL terminal with ctrl + \` . Not sure about WSL terminal? Go to [this post](https://blogs.msdn.microsoft.com/commandline/2017/10/27/running-node-js-on-wsl-from-visual-studio-code/).
+
+
+# Mobile
+
+## Create a project
+
+\`\`\`bash
+git clone https://github.com/puncsky/mobile-onefx-boilerplate.git my-awesome-mobile-project
+\`\`\`
+
+## Run your project
+This is intended for *nix users. If you use Windows, go to [Run on Windows](#run-on-windows). Let’s first prepare the environment.
+
+\`\`\`bash
+cd my-awesome-mobile-project
+
+nvm use 10.15.0
+npm install
+\`\`\`
+
+### Development mode
+To run your project in development mode, run:
+
+\`\`\`bash
+npm run start
+\`\`\`
+
+
 `;
 
 export const md = new MarkdownIt({
