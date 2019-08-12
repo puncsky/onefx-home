@@ -20,3 +20,5 @@ home.section1.desc: >-
 topbar.doc: DOCUMENT
 topbar.contributing: CONTRIBUTING
 footer.built_with_love: 'Built with <span style="font-size: 12px; color: #F27788;">♥</span> in San Francisco'
+home.who_s_using?: Who is Using OneFx?
+home.we_are_building: OneFx is building fullstack Apps for these projects...

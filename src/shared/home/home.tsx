@@ -77,9 +77,67 @@ class Home extends PureComponent {
             </Row>
           </ContentPadding>
         </Layout.Content>
+
+        <UsedBy />
       </Layout>
     );
   }
+}
+
+function UsedBy(): JSX.Element {
+  return (
+    <Layout.Content tagName={"main"} style={{ backgroundColor: colors.white }}>
+      <ContentPadding>
+        <Row style={{ margin: "80px 0" }}>
+          <Col>
+            <TextCenter>
+              <H2>{t("home.who_s_using?")}</H2>
+              <P>{t("home.we_are_building")}</P>
+              <Row
+                type="flex"
+                gutter={16}
+                justify="space-around"
+                align="middle"
+              >
+                <Col span={8}>
+                  <a
+                    href="https://cocusocial.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Img2 src="/cocusocial.png" />
+                    <P>
+                      CocuSocial: Discover a different cooking class experience
+                    </P>
+                  </a>
+                </Col>
+                <Col span={8}>
+                  <a
+                    href="https://member.iotex.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Img2 src="/iotex.svg" />
+                    <P>IoTeX Member Portal</P>
+                  </a>
+                </Col>
+                <Col span={8}>
+                  <a
+                    href="https://tianpan.co/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Img2 src="/tianpanco.svg" />
+                    <P>TianPan.co: Startup Engineering</P>
+                  </a>
+                </Col>
+              </Row>
+            </TextCenter>
+          </Col>
+        </Row>
+      </ContentPadding>
+    </Layout.Content>
+  );
 }
 
 export { Home };
@@ -87,6 +145,15 @@ export { Home };
 const Img = styled("img", {
   width: "100%",
   maxHeight: "450px"
+});
+
+const Img2 = styled("img", {
+  width: "100%",
+  maxHeight: "120px"
+});
+
+const TextCenter = styled("div", {
+  textAlign: "center"
 });
 
 const HeroH1 = styled("h1", {
@@ -106,5 +173,6 @@ const H2 = styled("h2", {
 });
 
 const P = styled("div", {
-  fontSize: "18px"
+  fontSize: "18px",
+  margin: "8px 0"
 });
