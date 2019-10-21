@@ -11,6 +11,7 @@ import { styled } from "onefx/lib/styletron-react";
 import React from "react";
 import { PureComponent } from "react";
 import { withRouter } from "react-router";
+import { CommonMargin } from "../common/common-margin";
 import { Flex } from "../common/flex";
 import { colors } from "../common/styles/style-color";
 import { ContentPadding } from "../common/styles/style-padding";
@@ -32,17 +33,29 @@ class Home extends PureComponent {
               <Col md={12} xs={24}>
                 <HeroH1>{t("home.title")}</HeroH1>
                 <HeroP>{t("home.desc")}</HeroP>
-                <Button
-                  type="primary"
-                  size="large"
-                  href="/doc.html"
-                  onClick={e => {
-                    e.preventDefault();
-                    history.push("/doc.html");
-                  }}
-                >
-                  {t("home.get_started")}
-                </Button>
+                <Flex justifyContent="flex-start!important">
+                  <Button
+                    type="primary"
+                    size="large"
+                    href="/doc.html"
+                    onClick={e => {
+                      e.preventDefault();
+                      history.push("/doc.html");
+                    }}
+                  >
+                    {t("home.get_started")}
+                  </Button>
+
+                  <CommonMargin />
+
+                  <Button
+                    size="large"
+                    target="_blank"
+                    href="https://github.com/puncsky/web-onefx-boilerplate"
+                  >
+                    Fork me on Github
+                  </Button>
+                </Flex>
               </Col>
               <Col md={12} xs={24}>
                 <Flex center={true} width="100%">
