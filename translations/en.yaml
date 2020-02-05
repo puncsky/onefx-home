@@ -10,7 +10,7 @@ home.desc: Frontend? Backend? Mobile? No problem. One framework rules them all. 
 home.get_started: Get Started
 home.section1.title: Why OneFx?
 home.section1.desc: >-
-  <p>OneFx is a high-level TypeScript Web and Mobile framework that empowers rapid development, clean code, and pragmatic design. Built by experienced developers, it reduces the hassle of Web development, so you can focus on  your app, instead of reinvent the wheel. It’s free and open source.
+  <p>OneFx is a high-level TypeScript Web and Mobile framework that empowers rapid development, clean code, and pragmatic design. Built by experienced developers, it reduces the hassle of Web development, so you can focus on  your app, instead of reinventing the wheel. It’s free and open source.
   </p>
   <ul>
     <li><strong>Blazingly fast.</strong> Enjoy the modern dev technologies that are ready out of the box. If you know React, GraphQL, and KOA, you are already the master of OneFx, while other frameworks introduce way more new APIs than what you need. </li>
