@@ -10,7 +10,7 @@ import { t } from "onefx/lib/iso-i18n";
 import { styled } from "onefx/lib/styletron-react";
 import React from "react";
 import { PureComponent } from "react";
-import { withRouter } from "react-router";
+import { withRouter } from "onefx/lib/react-router";
 import { CommonMargin } from "../common/common-margin";
 import { Flex } from "../common/flex";
 import { colors } from "../common/styles/style-color";
@@ -60,7 +60,7 @@ class Home extends PureComponent {
               <Col md={12} xs={24}>
                 <Flex center={true} width="100%">
                   <Img
-                    src={assetURL("/building-website.svg")}
+                    src={assetURL("building-website.svg")}
                     alt="building apps with OneFx"
                   />
                 </Flex>
@@ -75,7 +75,7 @@ class Home extends PureComponent {
               <Col md={12} xs={24}>
                 <Flex center={true} width="100%">
                   <Img
-                    src={assetURL("/startup.svg")}
+                    src={assetURL("startup.svg")}
                     alt="building apps with OneFx"
                   />
                 </Flex>

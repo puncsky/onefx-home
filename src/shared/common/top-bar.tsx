@@ -2,7 +2,7 @@
 import { styled } from "onefx/lib/styletron-react";
 import { Component } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
-import { Link } from "react-router-dom";
+import { Link } from "onefx/lib/react-router-dom";
 
 // @ts-ignore
 import { assetURL } from "onefx/lib/asset-url";
@@ -205,7 +205,7 @@ const LogoWrapper = styled(Link, {
 function Logo(): JSX.Element {
   return (
     <LogoWrapper to="/">
-      <Icon url={assetURL("/favicon.svg")} />
+      <Icon url={assetURL("favicon.svg")} />
     </LogoWrapper>
   );
 }

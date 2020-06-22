@@ -4,6 +4,8 @@
 # -----------------------------------------------
 
 type Query {
-  # is the server healthy?
+  """
+  is the server healthy?
+  """
   health: String!
 }

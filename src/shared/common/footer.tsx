@@ -29,7 +29,7 @@ export function Footer(): JSX.Element {
           <img
             alt="built with onefx"
             style={{ height: "20px" }}
-            src={assetURL("/built-with-onefx.svg")}
+            src={assetURL("built-with-onefx.svg")}
           />
         </a>
       </div>

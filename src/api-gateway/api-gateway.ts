@@ -13,8 +13,7 @@ export async function setApiGateway(server: MyServer): Promise<void> {
   const schema = await buildSchema({
     resolvers,
     emitSchemaFile: {
-      path: sdlPath,
-      commentDescriptions: true
+      path: sdlPath
     },
     validate: false
   });

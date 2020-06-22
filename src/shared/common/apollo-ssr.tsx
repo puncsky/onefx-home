@@ -54,6 +54,7 @@ export async function apolloSSR(
   try {
     await getDataFromTree(
       <RootServer
+        routePrefix={""}
         store={store}
         location={ctx.url}
         context={context}

@@ -1,5 +1,4 @@
 import { connect } from "react-redux";
-import { withRouter } from "react-router";
 
 import { App } from "./app";
 
@@ -8,7 +7,7 @@ type Props = {
   locale: string;
 };
 
-export const AppContainer = withRouter(
+export const AppContainer =
   // @ts-ignore
   connect<Props>(
     (state: object): Props => {
@@ -19,5 +18,4 @@ export const AppContainer = withRouter(
         locale: state.base.locale
       };
     }
-  )(App)
-);
+  )(App);

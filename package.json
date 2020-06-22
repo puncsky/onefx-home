@@ -14,20 +14,11 @@
     "build-static-html": "NODE_ENV=production ts-node ./src/server/generate-static-html.ts",
     "server": "node server",
     "lint": "pretty-quick --staged && tslint --fix --project tsconfig.json -t stylish",
-    "postinstall": "npm run bp && npm run doc",
+    "postinstall": "npm run bp",
     "cover": "NODE_ENV=test tsc && nyc npm run ava",
     "size": "ls -lh dist/",
     "bp": "npm run build-production && npm run size",
-    "kill": "lsof -n -i4TCP:4100 | grep LISTEN | awk '{ print $2 }' | xargs kill",
-    "doc": "graphdoc --config ./package.json --force"
-  },
-  "graphdoc": {
-    "ga": "UA-XXXXXXXX",
-    "graphiql": "/api-gateway/",
-    "logo": "<a href=\"/\" target=\"_blank\" style=\"display:block;padding:1rem 3rem\"><img src=\"/favicon.png\" /></a>",
-    "schemaFile": "./src/api-gateway/api-gateway.graphql",
-    "output": "./dist/doc/api-gateway/",
-    "baseUrl": "./"
+    "kill": "lsof -n -i4TCP:4100 | grep LISTEN | awk '{ print $2 }' | xargs kill"
   },
   "husky": {
     "hooks": {
@@ -67,7 +58,6 @@
   },
   "homepage": "https://github.com/puncsky/template_website#readme",
   "devDependencies": {
-    "@2fd/graphdoc": "2.4.0",
     "@types/highlight.js": "^9.12.3",
     "@types/markdown-it": "0.0.7",
     "ava": "1.1.0",
@@ -157,7 +147,7 @@
     "mongoose": "5.5.11",
     "nodemailer": "5.1.1",
     "nodemailer-mailgun-transport": "1.4.0",
-    "onefx": "^1.5.2",
+    "onefx": "2.0.1",
     "process": "0.11.10",
     "react": "16.8.3",
     "react-apollo": "2.5.6",
