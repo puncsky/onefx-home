@@ -66,7 +66,7 @@ NODE_ENV=production npm run start
 
 We use prettier, tslint, and editorconfig to enforce consistent styles across the whole project, so that we will not bikeshed on coding styles in the code review.
 
-However, please visit our [Contributing Code](/contributing.html) before submitting your code. 
+However, please visit our [Contributing Code](/contributing.html) before submitting your code.
 
 ## Architecture
 
@@ -210,11 +210,11 @@ client-side routing is using [react-router v4](https://reacttraining.com/react-r
 We use Apollo Graphql and TypeGraphQL for universal rendering with React. For detailed documentation, please visit:
 
 1. [Define GraphQL schemas in TypeScript](https://typegraphql.ml/docs/getting-started.html)
-2. [Learn how to fetch data with the Apollo Query component](https://www.apollographql.com/docs/tutorial/queries/) 
+2. [Learn how to fetch data with the Apollo Query component](https://www.apollographql.com/docs/tutorial/queries/)
 
 ### Make a query
 
-In \`src/api-gateway/resolvers/\`, define a new resolver and method. Take the meta data endpoint of the server health for example. 
+In \`src/api-gateway/resolvers/\`, define a new resolver and method. Take the meta data endpoint of the server health for example.
 
 \`\`\`js
 import { Query, Resolver, ResolverInterface } from "type-graphql";
@@ -296,7 +296,9 @@ Onefx reads translations from \`./translations\` directory. Please create a file
 homepage.hello: hello, \${userName}!
 \`\`\`
 
-and then in the react view file
+### React / Client-side
+
+and then in the react view file (client-side)
 
 \`\`\`js
 import {t} from 'onefx/lib/iso-i18n';
@@ -309,6 +311,10 @@ function Greetings() {
 \`\`\`
 
 When users visit this site with \`accept-language: en\` in the header, which is set by the browser, then they will see translated greetings. If you want to explicitly set the locale, then visit the page with a query string \`?locale=en\` then it will memorize this in the cookie.
+
+### Server-side
+
+\`t\` singleton function does not work in the server-side because the async calls may switch the context and mix it with requests from other languages. In this case, please use \`ctx.t\` instead.
 
 ## Testing
 test files are supposed to be placed in any module like \`./__test__/example.test.js\` in [ava test utils](https://github.com/avajs/ava/tree/master/docs).
@@ -483,7 +489,6 @@ git clone https://github.com/puncsky/mobile-onefx-boilerplate.git my-awesome-mob
 \`\`\`
 
 ## Run your project
-This is intended for *nix users. If you use Windows, go to [Run on Windows](#run-on-windows). Let’s first prepare the environment.
 
 \`\`\`bash
 cd my-awesome-mobile-project
