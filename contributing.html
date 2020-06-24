@@ -1,0 +1,279 @@
+<!DOCType html>
+<html lang="en">
+  <head>
+    <title data-react-helmet="true">Contribution Guide - OneFx</title>
+    <meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"/><meta data-react-helmet="true" name="description" content="Building web &amp; mobile apps with speed &amp; quality"/><meta data-react-helmet="true" name="theme-color" content="#FBB03B"/><meta data-react-helmet="true" property="og:description" content="Building web &amp; mobile apps with speed &amp; quality"/><meta data-react-helmet="true" property="twitter:card" content="summary"/><meta data-react-helmet="true" property="og:title" content="Contribution Guide - OneFx"/> 
+    <link data-react-helmet="true" rel="manifest" href="/manifest.json"/><link data-react-helmet="true" rel="apple-touch-icon" href="/favicon.svg"/><link data-react-helmet="true" rel="icon" type="image/png" sizes="any" href="/favicon.png"/><link data-react-helmet="true" rel="stylesheet" type="text/css" href="/stylesheets/main.css"/><link data-react-helmet="true" rel="stylesheet" type="text/css" href="/stylesheets/antd.css"/><link data-react-helmet="true" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css"/><link data-react-helmet="true" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet"/><link data-react-helmet="true" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css"/>
+    <style data-react-helmet="true" type="text/css">
+h1, h2, h3, h4, h5 {
+  padding: 52px 0 8px;
+  margin: -52px 0 0 !important;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+}
+h1 > a.markdownIt-Anchor > span, h2 > a.markdownIt-Anchor > span, h3 > a.markdownIt-Anchor > span, h4 > a.markdownIt-Anchor > span, h5 > a.markdownIt-Anchor > span {
+  color: transparent;}
+
+h1:hover > a.markdownIt-Anchor > span, h2:hover > a.markdownIt-Anchor > span, h3:hover > a.markdownIt-Anchor > span, h4:hover > a.markdownIt-Anchor > span, h5:hover > a.markdownIt-Anchor > span {
+  color: #dfe3e6; }
+
+h1:hover > a.markdownIt-Anchor:hover > span, h2:hover > a.markdownIt-Anchor:hover > span, h3:hover > a.markdownIt-Anchor:hover > span, h4:hover > a.markdownIt-Anchor:hover > span, h5:hover > a.markdownIt-Anchor:hover > span {
+  color: #FBB03B; }
+
+h1:focus > a.markdownIt-Anchor:focus > span, h2:focus > a.markdownIt-Anchor:focus > span, h3:focus > a.markdownIt-Anchor:focus > span, h4:focus > a.markdownIt-Anchor:focus > span, h5:focus > a.markdownIt-Anchor:focus > span {
+  color: #FBB03B; }
+
+h2:before {
+  content: "\A";
+  width: 8px;
+  height: 20px;
+  background: #FBB03B;
+  display: inline-block;
+  margin: 0 10px 0 0; }
+
+p {   word-wrap: break-word; }
+
+.top-bar-fixed-top {position: fixed !important;top: 52px;}
+
+.markdownIt-Link-Anchor::before {
+  content: "#";
+}
+</style>
+    <style>body{margin:0}</style>
+    <style class="styletron-global">._ae{font-family:Noto Sans,Helvetica Neue,sans-serif,Microsoft YaHei !important}._af{background-color:#fff}._ag{color:#333333}._ah{text-rendering:optimizeLegibility}._ai{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex}._aj{-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}._ak{-webkit-box-pack:justify;justify-content:space-between}._al{-webkit-box-align:center;align-items:center}._am{line-height:52px}._an{height:52px}._ao{background-color:#2E3235}._ap{color:#fff}._aq{position:fixed}._ar{top:0px}._as{left:0px}._at{width:100%}._au{z-index:70}._ax{padding-left:6.6vw}._ay{padding-right:6.6vw}._b1{box-sizing:border-box}._b2{width:52px}._b3{background-repeat:no-repeat}._b4{background-position:center}._b5{background-size:contain}._b6{background-image:url("/favicon.svg")}._b7{height:100%}._b8{margin:0}._b9{margin:8px}._ba{margin-left:0}._bb{text-decoration:none}._bc:hover{color:#FBB03B}._bd{-webkit-transition:all 0.2s ease;-moz-transition:all 0.2s ease;transition:all 0.2s ease}._be{font-weight:bold}._bf{display:flex!important}._bh{margin-left:14px}._bm{display:none!important}._bo{cursor:pointer}._bp{-webkit-box-pack:center;justify-content:center}._bq{padding:5px}._br{display:block}._bs{padding:26px 26px 26px 26px}._bt{-webkit-box-flex:1}._bu{-webkit-justify-content:center}._bv{-webkit-box-lines:multiple;flex-wrap:wrap}._bw{align-content:auto}._bx{height:auto}._by{background-color:auto}._bz{width:auto}._c0{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}._c1{-webkit-justify-content:space-between}._c2{align-content:flex-end!important}._c3{width:68%}._c4{max-width:680px}._c5{color:#404040!important}._c6{width:32%}._c8{padding-top:32px}._c9{padding-bottom:32px}._ca{height:89px}._cb{background-color:#575a5d}</style><style class="styletron-global" media="only screen and (min-width: 1281px)">._az{padding-left:16vw}._b0{padding-right:16vw}</style><style class="styletron-global" media="only screen and (max-width: 575px)">._av{padding-left:16px}._aw{padding-right:16px}._bg{display:none!important}._bi{box-sizing:border-box}._bj{width:100%}._bk{padding:16px 0 16px 0}._bl{border-bottom:1px #EDEDED solid}._bn{display:flex!important}._c7{display:none}</style>
+    <script id="json-globals" type="application/json">{"state":{"base":{"analytics":{"googleTid":"UA-43072488-3"},"csrfToken":"2NPylfRg-wgwKrAi5nmQg2jz0E9eDbvacwOY","translations":{"meta.title":"OneFx","meta.description":"Building web & mobile apps with speed & quality","topbar.brand":"OneFx","topbar.home":"HOME","not_found.bar":"Not Found","not_found.title":"Oops!","not_found.info":"We cannot find the page for you...","home.title":"Building web & mobile apps with speed & quality","home.desc":"Frontend? Backend? Mobile? No problem. One framework rules them all. No countless new APIs to learn. Just build fast with the tools you love - React, GraphQL, KOA, TypeScript, AVA, Webpack, etc.","home.get_started":"Get Started","home.section1.title":"Why OneFx?","home.section1.desc":"\u003Cp\u003EOneFx is a high-level TypeScript Web and Mobile framework that empowers rapid development, clean code, and pragmatic design. Built by experienced developers, it reduces the hassle of Web development, so you can focus on  your app, instead of reinventing the wheel. It’s free and open source. \u003C\u002Fp\u003E \u003Cul\u003E\n  \u003Cli\u003E\u003Cstrong\u003EBlazingly fast.\u003C\u002Fstrong\u003E Enjoy the modern dev technologies that are ready out of the box. If you know React, GraphQL, and KOA, you are already the master of OneFx, while other frameworks introduce way more new APIs than what you need. \u003C\u002Fli\u003E\n  \u003Cli\u003E\u003Cstrong\u003EHorizontally scalable.\u003C\u002Fstrong\u003E OneFx is Internet scale but without the complexity of complete separation of frontend and backend.\u003C\u002Fli\u003E\n  \u003Cli\u003E\u003Cstrong\u003ETightly Secure\u003C\u002Fstrong\u003E OneFx takes security seriously and helps developers avoid many common security mistakes.\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E","topbar.doc":"DOCUMENT","topbar.contributing":"CONTRIBUTING","footer.built_with_love":"Built with \u003Cspan style=\"font-size: 12px; color: #F27788;\"\u003E♥\u003C\u002Fspan\u003E in San Francisco","home.who_s_using?":"Who is Using OneFx?","home.we_are_building":"OneFx is building fullstack Apps for these projects..."},"locale":"en","supportedLocales":["en","zh-cn"],"manifest":{"\u002Fmain.js":"main-10d706f9cbf41f3bafd0.js","\u002Fmain-10d706f9cbf41f3bafd0.js.LICENSE":"main-10d706f9cbf41f3bafd0.js.LICENSE"},"blah":"this is a sample initial state","apiGatewayUrl":"https:\u002F\u002Ftianpan.co\u002Fapi-gateway\u002F"},"apolloState":{"$ROOT_QUERY.article({\"id\":\"onefx-contri\"})":{"title":"Contribution Guide","contentHTML":"\u003Ch2 id=\"avoid-bad-practices\"\u003EAvoid Bad Practices \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-bad-practices\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh2\u003E\n\u003Ch3 id=\"avoid-missing-error-handling\"\u003EAvoid missing error-handling \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-missing-error-handling\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003E❌ Bad\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Etry\u003C\u002Fspan\u003E {\n  \u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E resp = \u003Cspan class=\"hljs-keyword\"\u003Eawait\u003C\u002Fspan\u003E submitForm(values);\n} \u003Cspan class=\"hljs-keyword\"\u003Ecatch\u003C\u002Fspan\u003E (err) {\n}\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E✅ Good\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Etry\u003C\u002Fspan\u003E {\n  \u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E resp = \u003Cspan class=\"hljs-keyword\"\u003Eawait\u003C\u002Fspan\u003E submitForm(values);\n} \u003Cspan class=\"hljs-keyword\"\u003Ecatch\u003C\u002Fspan\u003E (err) {\n  notification.error({\u003Cspan class=\"hljs-attr\"\u003Emessage\u003C\u002Fspan\u003E: \u003Cspan class=\"hljs-string\"\u003E`failed to submitForm: \u003Cspan class=\"hljs-subst\"\u003E${err}\u003C\u002Fspan\u003E`\u003C\u002Fspan\u003E});\n}\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch3 id=\"avoid-callback-hell-spaghetti-code-unpredictable-error-handling\"\u003EAvoid callback hell (= spaghetti code + unpredictable error handling) \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-callback-hell-spaghetti-code-unpredictable-error-handling\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003E❌ Bad\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"hljs-function\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Efunction\u003C\u002Fspan\u003E \u003Cspan class=\"hljs-title\"\u003EsubmitForm\u003C\u002Fspan\u003E(\u003Cspan class=\"hljs-params\"\u003Evalues, cb\u003C\u002Fspan\u003E) \u003C\u002Fspan\u003E{\n  validateForm(values, (err) =&gt; {\n    \u003Cspan class=\"hljs-keyword\"\u003Eif\u003C\u002Fspan\u003E (err) {\n      \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E cb(err, \u003Cspan class=\"hljs-literal\"\u003Enull\u003C\u002Fspan\u003E);\n    }\n\n    makeRequest(values, (err, resp) =&gt; {\n      \u003Cspan class=\"hljs-keyword\"\u003Eif\u003C\u002Fspan\u003E (err) {\n        \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E cb(err, \u003Cspan class=\"hljs-literal\"\u003Enull\u003C\u002Fspan\u003E);\n      }\n\n      makeAnotherRequest(resp, (err, anotherResp) =&gt; {\n        \u003Cspan class=\"hljs-keyword\"\u003Eif\u003C\u002Fspan\u003E (err) {\n          \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E cb(err, \u003Cspan class=\"hljs-literal\"\u003Enull\u003C\u002Fspan\u003E);\n        }\n\n        \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E cb(\u003Cspan class=\"hljs-literal\"\u003Enull\u003C\u002Fspan\u003E, wrapResult(anotherResp));\n      })\n    })\n  })\n}\n\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E✅ Good\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-js\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E validateFormPromise = promisify(validateForm);\n\u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E makeRequestPromise = promisify(makeRequest);\n\u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E makeAnotherRequestPromise = promisify(makeAnotherRequest);\n\n\u003Cspan class=\"hljs-keyword\"\u003Easync\u003C\u002Fspan\u003E \u003Cspan class=\"hljs-function\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Efunction\u003C\u002Fspan\u003E \u003Cspan class=\"hljs-title\"\u003EsubmitForm\u003C\u002Fspan\u003E(\u003Cspan class=\"hljs-params\"\u003Evalues\u003C\u002Fspan\u003E) \u003C\u002Fspan\u003E{\n  \u003Cspan class=\"hljs-keyword\"\u003Etry\u003C\u002Fspan\u003E {\n    \u003Cspan class=\"hljs-keyword\"\u003Eawait\u003C\u002Fspan\u003E validateFormPromise(values);\n    \u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E resp = \u003Cspan class=\"hljs-keyword\"\u003Eawait\u003C\u002Fspan\u003E makeRequestPromise(values);\n    \u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E anotherResp = \u003Cspan class=\"hljs-keyword\"\u003Eawait\u003C\u002Fspan\u003E makeAnotherRequestPromise(resp);\n    \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E wrapResult(anotherResp);\n  } \u003Cspan class=\"hljs-keyword\"\u003Ecatch\u003C\u002Fspan\u003E (e) {\n    \u003Cspan class=\"hljs-keyword\"\u003Ethrow\u003C\u002Fspan\u003E e;\n  }\n}\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch3 id=\"always-check-responsiveness\"\u003EAlways check responsiveness \u003Ca class=\"markdownIt-Anchor\" href=\"#always-check-responsiveness\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003EMake sure it works on both mobile and desktop devices.\u003C\u002Fp\u003E\n\u003Ch3 id=\"prefer-early-exit-over-indentations\"\u003EPrefer early exit over indentations \u003Ca class=\"markdownIt-Anchor\" href=\"#prefer-early-exit-over-indentations\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003E❌ Bad\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E\u003Cspan class=\"hljs-function\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Efunction\u003C\u002Fspan\u003E \u003Cspan class=\"hljs-title\"\u003EsomeFunction\u003C\u002Fspan\u003E(\u003Cspan class=\"hljs-params\"\u003EsomeCondition\u003C\u002Fspan\u003E) \u003C\u002Fspan\u003E{\n  \u003Cspan class=\"hljs-keyword\"\u003Eif\u003C\u002Fspan\u003E (someCondition) {\n      \u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F Do Something\u003C\u002Fspan\u003E\n  }\n}\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E✅ Good: Use early return\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E\u003Cspan class=\"hljs-function\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Efunction\u003C\u002Fspan\u003E \u003Cspan class=\"hljs-title\"\u003EsomeFunction\u003C\u002Fspan\u003E(\u003Cspan class=\"hljs-params\"\u003EsomeCondition\u003C\u002Fspan\u003E) \u003C\u002Fspan\u003E{\n  \u003Cspan class=\"hljs-keyword\"\u003Eif\u003C\u002Fspan\u003E (!someCondition) {\n      \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E;\n  }\n  \u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F Do Something\u003C\u002Fspan\u003E\n}\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch3 id=\"avoid-super-long-3-inheritance-chain\"\u003EAvoid super-long (&gt;3) inheritance chain \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-super-long-3-inheritance-chain\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Ch3 id=\"avoid-circular-dependency\"\u003EAvoid circular dependency \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-circular-dependency\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Ch3 id=\"avoid-complicated-code\"\u003EAvoid complicated code \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-complicated-code\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Ch4 id=\"avoid-complicated-tertiary-operation\"\u003EAvoid complicated tertiary operation \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-complicated-tertiary-operation\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh4\u003E\n\u003Cp\u003E❌ Bad\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E sampleComponent = \u003Cspan class=\"hljs-function\"\u003E\u003Cspan class=\"hljs-params\"\u003E()\u003C\u002Fspan\u003E =&gt;\u003C\u002Fspan\u003E {\n  \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E isTrue ? \u003Cspan class=\"xml\"\u003E\u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003ETrue!\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E : \u003Cspan class=\"hljs-literal\"\u003Enull\u003C\u002Fspan\u003E\n};\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E✅ Good: Use short-circuit evaluation\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E sampleComponent = \u003Cspan class=\"hljs-function\"\u003E\u003Cspan class=\"hljs-params\"\u003E()\u003C\u002Fspan\u003E =&gt;\u003C\u002Fspan\u003E {\n  \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E isTrue &amp;&amp; \u003Cspan class=\"xml\"\u003E\u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003ETrue!\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\n};\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E❌ Bad\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E\u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F Y soo many ternary??? :-\u002F\u003C\u002Fspan\u003E\n\u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E sampleComponent = \u003Cspan class=\"hljs-function\"\u003E\u003Cspan class=\"hljs-params\"\u003E()\u003C\u002Fspan\u003E =&gt;\u003C\u002Fspan\u003E {\n  \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E (\n    \u003Cspan class=\"xml\"\u003E\u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ediv\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\n      {flag &amp;&amp; flag2 &amp;&amp; !flag3\n        ? flag4\n        ? \u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003EBlah\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\n        : flag5\n        ? \u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003EMeh\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\n        : \u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003EHerp\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\n        : \u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003EDerp\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\n      }\n    \u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ediv\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\n  )\n};\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E✅ Good: Move logic to sub-components\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E sampleComponent = \u003Cspan class=\"hljs-function\"\u003E\u003Cspan class=\"hljs-params\"\u003E()\u003C\u002Fspan\u003E =&gt;\u003C\u002Fspan\u003E {\n  \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E (\n    \u003Cspan class=\"xml\"\u003E\u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ediv\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\n      {\n        (() =&gt; {\n          if (flag &amp;&amp; flag2 &amp;&amp; !flag3) {\n            if (flag4) {\n              return \u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003EBlah\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\n            } else if (flag5) {\n              return \u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003EMeh\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\n            } else {\n              return \u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003EHerp\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\n            }\n          } else {\n            return \u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003EDerp\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ep\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\n          }\n        })()\n      }\n    \u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Ediv\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\n  )\n};\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch4 id=\"avoid-commenting-out-unused-code\"\u003EAvoid commenting out unused code \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-commenting-out-unused-code\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh4\u003E\n\u003Ch3 id=\"avoid-missing-i18n\"\u003EAvoid missing i18n \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-missing-i18n\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003E❌ Bad\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E&lt;h1&gt;My Awesome Project&lt;\u002Fh1&gt;\n&lt;p&gt;Create like a god. Command like a king. Work like a slave.&lt;\u002Fp&gt;\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E✅ Good\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E&lt;h1&gt;{t('home.my_awesome_project')}&lt;\u002Fh1&gt;\n&lt;p&gt;{t('home.my_awesome_project_desc')}&lt;\u002Fp&gt;\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch3 id=\"avoid-missing-i18n-rtl-issues\"\u003Eavoid missing i18n RTL issues \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-missing-i18n-rtl-issues\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003E❌ Bad\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E\u003Cspan class=\"hljs-function\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Efunction\u003C\u002Fspan\u003E \u003Cspan class=\"hljs-title\"\u003EGreeting\u003C\u002Fspan\u003E(\u003Cspan class=\"hljs-params\"\u003E{username}\u003C\u002Fspan\u003E) \u003C\u002Fspan\u003E{\n  \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E (\n    \u003Cspan class=\"xml\"\u003E\u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Eh1\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E{t('home.hello')}, {username}!\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Eh1\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\n  );\n}\n\n\u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F home.hello: Hello\u003C\u002Fspan\u003E\n\u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F home.hello: 你好\u003C\u002Fspan\u003E\n\u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F home.hello: שלום\u003C\u002Fspan\u003E\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E✅ Good\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E\u003Cspan class=\"hljs-function\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Efunction\u003C\u002Fspan\u003E \u003Cspan class=\"hljs-title\"\u003EGreeting\u003C\u002Fspan\u003E(\u003Cspan class=\"hljs-params\"\u003E{username}\u003C\u002Fspan\u003E) \u003C\u002Fspan\u003E{\n  \u003Cspan class=\"hljs-keyword\"\u003Ereturn\u003C\u002Fspan\u003E (\n    \u003Cspan class=\"xml\"\u003E\u003Cspan class=\"hljs-tag\"\u003E&lt;\u003Cspan class=\"hljs-name\"\u003Eh1\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E{t('hello')}, {username}\u003Cspan class=\"hljs-tag\"\u003E&lt;\u002F\u003Cspan class=\"hljs-name\"\u003Eh1\u003C\u002Fspan\u003E&gt;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\n  );\n}\n\n\u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F home.hello: Hello, ${username}!\u003C\u002Fspan\u003E\n\u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F home.hello: 你好, ${username}!\u003C\u002Fspan\u003E\n\u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F home.hello: !${username}, שלום\u003C\u002Fspan\u003E\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch3 id=\"prefer-css-in-js-over-global-css-styles-unless-they-are-truly-global\"\u003EPrefer CSS-IN-JS over global CSS styles unless they are truly global. \u003Ca class=\"markdownIt-Anchor\" href=\"#prefer-css-in-js-over-global-css-styles-unless-they-are-truly-global\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003ELocal JS styles have better “deleteability”.\u003C\u002Fp\u003E\n\u003Cp\u003E❌ Bad\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-scss\"\u003E\u003Cspan class=\"hljs-selector-class\"\u003E.header-col\u003C\u002Fspan\u003E {\n  \u003Cspan class=\"hljs-attribute\"\u003Etext-align\u003C\u002Fspan\u003E: right \u003Cspan class=\"hljs-meta\"\u003E!important\u003C\u002Fspan\u003E;\n  \u003Cspan class=\"hljs-attribute\"\u003Eword-break\u003C\u002Fspan\u003E: normal \u003Cspan class=\"hljs-meta\"\u003E!important\u003C\u002Fspan\u003E;\n  \u003Cspan class=\"hljs-attribute\"\u003Ecolor\u003C\u002Fspan\u003E: \u003Cspan class=\"hljs-number\"\u003E#73fbe0\u003C\u002Fspan\u003E \u003Cspan class=\"hljs-meta\"\u003E!important\u003C\u002Fspan\u003E;\n  \u003Cspan class=\"hljs-attribute\"\u003Ewidth\u003C\u002Fspan\u003E: \u003Cspan class=\"hljs-number\"\u003E20%\u003C\u002Fspan\u003E;\n}\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E✅ Good\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E\u003Cspan class=\"hljs-keyword\"\u003Eimport\u003C\u002Fspan\u003E { styled } \u003Cspan class=\"hljs-keyword\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\"hljs-string\"\u003E\"onefx\u002Flib\u002Fstyletron-react\"\u003C\u002Fspan\u003E;\n\u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E Td = styled(\u003Cspan class=\"hljs-string\"\u003E\"div\"\u003C\u002Fspan\u003E, {\n  \u003Cspan class=\"hljs-string\"\u003E\"textAlign\"\u003C\u002Fspan\u003E:\u003Cspan class=\"hljs-string\"\u003E\"right !important\"\u003C\u002Fspan\u003E,\n  \u003Cspan class=\"hljs-string\"\u003E\"wordBreak\"\u003C\u002Fspan\u003E:\u003Cspan class=\"hljs-string\"\u003E\"normal !important\"\u003C\u002Fspan\u003E,\n  \u003Cspan class=\"hljs-string\"\u003E\"color\"\u003C\u002Fspan\u003E:\u003Cspan class=\"hljs-string\"\u003E\"#73fbe0 !important\"\u003C\u002Fspan\u003E,\n  \u003Cspan class=\"hljs-string\"\u003E\"width\"\u003C\u002Fspan\u003E:\u003Cspan class=\"hljs-string\"\u003E\"20%\"\u003C\u002Fspan\u003E\n})\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch3 id=\"dry-dont-repeat-yourself\"\u003EDRY: don’t repeat yourself \u003Ca class=\"markdownIt-Anchor\" href=\"#dry-dont-repeat-yourself\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Ch3 id=\"avoid-simple-copy-and-paste-prefer-using-libraries-directly-understanding-the-code-and-remove-unused-places\"\u003EAvoid simple copy-and-paste. Prefer using libraries directly understanding the code and remove unused places. \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-simple-copy-and-paste-prefer-using-libraries-directly-understanding-the-code-and-remove-unused-places\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Ch3 id=\"avoid-unreasonable-comments-update-or-remove-confusing-comments\"\u003EAvoid unreasonable comments. Update or remove confusing comments. \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-unreasonable-comments-update-or-remove-confusing-comments\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Ch2 id=\"use-consistent-project-structure\"\u003EUse Consistent Project Structure \u003Ca class=\"markdownIt-Anchor\" href=\"#use-consistent-project-structure\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh2\u003E\n\u003Ch3 id=\"1-use-indexjs-for-exporting-the-main-component\"\u003E1. Use \u003Ccode\u003Eindex.js\u003C\u002Fcode\u003E for exporting the main component. \u003Ca class=\"markdownIt-Anchor\" href=\"#1-use-indexjs-for-exporting-the-main-component\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003EThe \u003Ccode\u003Eindex.js\u003C\u002Fcode\u003E should always export the main component. This file should also be the \u003Ccode\u003Emain\u003C\u002Fcode\u003E entry in the \u003Ccode\u003Epackage.json\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\n\u003Ch3 id=\"2-use-lowercase-kebab-case-filenames\"\u003E2. Use lowercase kebab-case filenames \u003Ca class=\"markdownIt-Anchor\" href=\"#2-use-lowercase-kebab-case-filenames\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003E❌ Bad\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-txt\"\u003EMyAwesomeComponent.js\nMy-Awesome-Component.js\nmy_awesome_component.js\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E✅ Good\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-txt\"\u003Emy-awesome-component.js\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch3 id=\"3-prefer-named-exports-over-default-exports\"\u003E3. Prefer named exports over default exports \u003Ca class=\"markdownIt-Anchor\" href=\"#3-prefer-named-exports-over-default-exports\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003E❌ Bad\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Ccode\u003Eexport default function() {}\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\n\u003Cp\u003E✅ Good\u003C\u002Fp\u003E\n\u003Cpre\u003E\u003Ccode class=\"language-jsx\"\u003E\u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F exports a function declared earlier\u003C\u002Fspan\u003E\n\u003Cspan class=\"hljs-keyword\"\u003Eexport\u003C\u002Fspan\u003E { myFunction };\n\u003Cspan class=\"hljs-comment\"\u003E\u002F\u002F exports a constant\u003C\u002Fspan\u003E\n\u003Cspan class=\"hljs-keyword\"\u003Eexport\u003C\u002Fspan\u003E \u003Cspan class=\"hljs-keyword\"\u003Econst\u003C\u002Fspan\u003E foo = \u003Cspan class=\"hljs-string\"\u003E\"bar\"\u003C\u002Fspan\u003E;\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch2 id=\"effective-refactoring\"\u003EEffective refactoring \u003Ca class=\"markdownIt-Anchor\" href=\"#effective-refactoring\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh2\u003E\n\u003Ch3 id=\"adopt-semantic-version\"\u003Eadopt semantic version \u003Ca class=\"markdownIt-Anchor\" href=\"#adopt-semantic-version\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Ch3 id=\"never-introduce-breaking-change-to-non-major-versions\"\u003Enever introduce breaking change to non-major versions \u003Ca class=\"markdownIt-Anchor\" href=\"#never-introduce-breaking-change-to-non-major-versions\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003Etwo-legged change\u003C\u002Fp\u003E\n\u003Ch2 id=\"avoid-bikeshedding\"\u003EAvoid Bikeshedding \u003Ca class=\"markdownIt-Anchor\" href=\"#avoid-bikeshedding\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh2\u003E\n\u003Cp\u003ELet styles be consistent. Let linters lint.\u003C\u002Fp\u003E\n\u003Ch3 id=\"prefer-px-over-pt-rem\"\u003EPrefer \u003Ccode\u003Epx\u003C\u002Fcode\u003E over \u003Ccode\u003Ept\u003C\u002Fcode\u003E, \u003Ccode\u003Erem\u003C\u002Fcode\u003E. \u003Ca class=\"markdownIt-Anchor\" href=\"#prefer-px-over-pt-rem\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\n\u003Cp\u003EUse \u003Ccode\u003Epx\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\n\u003Cul\u003E\n\u003Cli\u003EAvoid using \u003Ccode\u003Ept\u003C\u002Fcode\u003E.\u003C\u002Fli\u003E\n\u003Cli\u003EAvoid using \u003Ccode\u003Erem\u003C\u002Fcode\u003E. In most cases, users want to see more contents instead of larger fonts with larger screens.\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n\u003Ch1 id=\"ux-design-principles\"\u003EUX Design Principles \u003Ca class=\"markdownIt-Anchor\" href=\"#ux-design-principles\"\u003E\u003Cspan class=\"markdownIt-Link-Anchor\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh1\u003E\n\u003Cul\u003E\n\u003Cli\u003EEmpathy \u002F Perspective-taking is the most important.\u003C\u002Fli\u003E\n\u003Cli\u003EKeep elements consistent.\u003C\u002Fli\u003E\n\u003Cli\u003EInsist on the Highest Standards.\u003C\u002Fli\u003E\n\u003Cli\u003EDetail-oriented\n\u003Cul\u003E\n\u003Cli\u003ECheck i18n.\u003C\u002Fli\u003E\n\u003Cli\u003ECheck accessibility.\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n","__typename":"RecArticle"},"ROOT_QUERY":{"article({\"id\":\"onefx-contri\"})":{"type":"id","generated":true,"id":"$ROOT_QUERY.article({\"id\":\"onefx-contri\"})","typename":"RecArticle"}}}}}</script>
+    
+  </head>
+  <body>
+    <div id='root'><div class="_ae _af _ag _ah"><div><div class="_ai _aj _ak _al _am _an _ao _ap _aq _ar _as _at _au _av _aw _ax _ay _az _b0 _b1"><div class="_aj _ai _b1"><a class="_b2 _an" href="/"><div class="_b3 _b4 _b5 _b6 _b1 _at _b7 _b8"></div></a><div class="_b9"></div><a class="_ap _ba _bb _bc _bd _be " href="/">OneFx</a></div><div class="_aj _ai _b1"><div class="_bf _bg"><a class="_ap _bh _bb _bc _bd _be _bi _bj _bk _bl" href="/">HOME</a><a class="_ap _bh _bb _bc _bd _be _bi _bj _bk _bl" href="/doc.html">DOCUMENT</a><a class="_ap _bh _bb _bc _bd _be _bi _bj _bk _bl" href="/contributing.html">CONTRIBUTING</a></div></div><div class="_bc _bm _bn _bo _bp"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="https://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><div class="_bc _bm _bg _bo _bp _bq"><svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icons" stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Utils" transform="translate(-380.000000, -100.000000)" fill="currentColor"><g id="icons" transform="translate(20.000000, 20.000000)"><polygon id="close-[#1511]" points="371.4489 89.9997 380.0029 98.5537 378.5559 99.9997 370.0029 91.4457 361.4489 99.9997 360.0029 98.5537 368.5559 89.9997 360.0029 81.4457 361.4489 79.9997 370.0029 88.5537 378.5559 79.9997 380.0029 81.4457"></polygon></g></g></g></svg></div></div><div class="_br _bs _ao"></div></div><div style="min-height:calc(100vh - 141px)"><div style="margin:18px"></div><div style="width:100%"><div class="_at _av _aw _ax _ay _az _b0"><div class="_ai _bt _aj _bp _bu _b1 _bv _bw _al _at _bx _by"><div style="max-width:1320px;width:100%"><div class="_ai _bt _aj _bp _bu _b1 _bv _bw _al _bz _bx _by"><div class="_ai _bt _c0 _ak _c1 _b1 _bv _c2 _al _c3 _bx _bj _by"><article class="_c4 _at _c5"><h1>Contribution Guide</h1> <div><h2 id="avoid-bad-practices">Avoid Bad Practices <a class="markdownIt-Anchor" href="#avoid-bad-practices"><span class="markdownIt-Link-Anchor"></span></a></h2>
+<h3 id="avoid-missing-error-handling">Avoid missing error-handling <a class="markdownIt-Anchor" href="#avoid-missing-error-handling"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>❌ Bad</p>
+<pre><code class="language-js"><span class="hljs-keyword">try</span> {
+  <span class="hljs-keyword">const</span> resp = <span class="hljs-keyword">await</span> submitForm(values);
+} <span class="hljs-keyword">catch</span> (err) {
+}
+</code></pre>
+<p>✅ Good</p>
+<pre><code class="language-js"><span class="hljs-keyword">try</span> {
+  <span class="hljs-keyword">const</span> resp = <span class="hljs-keyword">await</span> submitForm(values);
+} <span class="hljs-keyword">catch</span> (err) {
+  notification.error({<span class="hljs-attr">message</span>: <span class="hljs-string">`failed to submitForm: <span class="hljs-subst">${err}</span>`</span>});
+}
+</code></pre>
+<h3 id="avoid-callback-hell-spaghetti-code-unpredictable-error-handling">Avoid callback hell (= spaghetti code + unpredictable error handling) <a class="markdownIt-Anchor" href="#avoid-callback-hell-spaghetti-code-unpredictable-error-handling"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>❌ Bad</p>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">submitForm</span>(<span class="hljs-params">values, cb</span>) </span>{
+  validateForm(values, (err) =&gt; {
+    <span class="hljs-keyword">if</span> (err) {
+      <span class="hljs-keyword">return</span> cb(err, <span class="hljs-literal">null</span>);
+    }
+
+    makeRequest(values, (err, resp) =&gt; {
+      <span class="hljs-keyword">if</span> (err) {
+        <span class="hljs-keyword">return</span> cb(err, <span class="hljs-literal">null</span>);
+      }
+
+      makeAnotherRequest(resp, (err, anotherResp) =&gt; {
+        <span class="hljs-keyword">if</span> (err) {
+          <span class="hljs-keyword">return</span> cb(err, <span class="hljs-literal">null</span>);
+        }
+
+        <span class="hljs-keyword">return</span> cb(<span class="hljs-literal">null</span>, wrapResult(anotherResp));
+      })
+    })
+  })
+}
+
+</code></pre>
+<p>✅ Good</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> validateFormPromise = promisify(validateForm);
+<span class="hljs-keyword">const</span> makeRequestPromise = promisify(makeRequest);
+<span class="hljs-keyword">const</span> makeAnotherRequestPromise = promisify(makeAnotherRequest);
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">submitForm</span>(<span class="hljs-params">values</span>) </span>{
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">await</span> validateFormPromise(values);
+    <span class="hljs-keyword">const</span> resp = <span class="hljs-keyword">await</span> makeRequestPromise(values);
+    <span class="hljs-keyword">const</span> anotherResp = <span class="hljs-keyword">await</span> makeAnotherRequestPromise(resp);
+    <span class="hljs-keyword">return</span> wrapResult(anotherResp);
+  } <span class="hljs-keyword">catch</span> (e) {
+    <span class="hljs-keyword">throw</span> e;
+  }
+}
+</code></pre>
+<h3 id="always-check-responsiveness">Always check responsiveness <a class="markdownIt-Anchor" href="#always-check-responsiveness"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>Make sure it works on both mobile and desktop devices.</p>
+<h3 id="prefer-early-exit-over-indentations">Prefer early exit over indentations <a class="markdownIt-Anchor" href="#prefer-early-exit-over-indentations"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>❌ Bad</p>
+<pre><code class="language-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">someFunction</span>(<span class="hljs-params">someCondition</span>) </span>{
+  <span class="hljs-keyword">if</span> (someCondition) {
+      <span class="hljs-comment">// Do Something</span>
+  }
+}
+</code></pre>
+<p>✅ Good: Use early return</p>
+<pre><code class="language-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">someFunction</span>(<span class="hljs-params">someCondition</span>) </span>{
+  <span class="hljs-keyword">if</span> (!someCondition) {
+      <span class="hljs-keyword">return</span>;
+  }
+  <span class="hljs-comment">// Do Something</span>
+}
+</code></pre>
+<h3 id="avoid-super-long-3-inheritance-chain">Avoid super-long (&gt;3) inheritance chain <a class="markdownIt-Anchor" href="#avoid-super-long-3-inheritance-chain"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<h3 id="avoid-circular-dependency">Avoid circular dependency <a class="markdownIt-Anchor" href="#avoid-circular-dependency"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<h3 id="avoid-complicated-code">Avoid complicated code <a class="markdownIt-Anchor" href="#avoid-complicated-code"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<h4 id="avoid-complicated-tertiary-operation">Avoid complicated tertiary operation <a class="markdownIt-Anchor" href="#avoid-complicated-tertiary-operation"><span class="markdownIt-Link-Anchor"></span></a></h4>
+<p>❌ Bad</p>
+<pre><code class="language-jsx"><span class="hljs-keyword">const</span> sampleComponent = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> isTrue ? <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>True!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span> : <span class="hljs-literal">null</span>
+};
+</code></pre>
+<p>✅ Good: Use short-circuit evaluation</p>
+<pre><code class="language-jsx"><span class="hljs-keyword">const</span> sampleComponent = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> isTrue &amp;&amp; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>True!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+};
+</code></pre>
+<p>❌ Bad</p>
+<pre><code class="language-jsx"><span class="hljs-comment">// Y soo many ternary??? :-/</span>
+<span class="hljs-keyword">const</span> sampleComponent = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      {flag &amp;&amp; flag2 &amp;&amp; !flag3
+        ? flag4
+        ? <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Blah<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        : flag5
+        ? <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Meh<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        : <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Herp<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        : <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Derp<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      }
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+};
+</code></pre>
+<p>✅ Good: Move logic to sub-components</p>
+<pre><code class="language-jsx"><span class="hljs-keyword">const</span> sampleComponent = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      {
+        (() =&gt; {
+          if (flag &amp;&amp; flag2 &amp;&amp; !flag3) {
+            if (flag4) {
+              return <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Blah<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            } else if (flag5) {
+              return <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Meh<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            } else {
+              return <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Herp<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            }
+          } else {
+            return <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Derp<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          }
+        })()
+      }
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+};
+</code></pre>
+<h4 id="avoid-commenting-out-unused-code">Avoid commenting out unused code <a class="markdownIt-Anchor" href="#avoid-commenting-out-unused-code"><span class="markdownIt-Link-Anchor"></span></a></h4>
+<h3 id="avoid-missing-i18n">Avoid missing i18n <a class="markdownIt-Anchor" href="#avoid-missing-i18n"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>❌ Bad</p>
+<pre><code class="language-jsx">&lt;h1&gt;My Awesome Project&lt;/h1&gt;
+&lt;p&gt;Create like a god. Command like a king. Work like a slave.&lt;/p&gt;
+</code></pre>
+<p>✅ Good</p>
+<pre><code class="language-jsx">&lt;h1&gt;{t('home.my_awesome_project')}&lt;/h1&gt;
+&lt;p&gt;{t('home.my_awesome_project_desc')}&lt;/p&gt;
+</code></pre>
+<h3 id="avoid-missing-i18n-rtl-issues">avoid missing i18n RTL issues <a class="markdownIt-Anchor" href="#avoid-missing-i18n-rtl-issues"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>❌ Bad</p>
+<pre><code class="language-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">{username}</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{t('home.hello')}, {username}!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-comment">// home.hello: Hello</span>
+<span class="hljs-comment">// home.hello: 你好</span>
+<span class="hljs-comment">// home.hello: שלום</span>
+</code></pre>
+<p>✅ Good</p>
+<pre><code class="language-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span>(<span class="hljs-params">{username}</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{t('hello')}, {username}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-comment">// home.hello: Hello, ${username}!</span>
+<span class="hljs-comment">// home.hello: 你好, ${username}!</span>
+<span class="hljs-comment">// home.hello: !${username}, שלום</span>
+</code></pre>
+<h3 id="prefer-css-in-js-over-global-css-styles-unless-they-are-truly-global">Prefer CSS-IN-JS over global CSS styles unless they are truly global. <a class="markdownIt-Anchor" href="#prefer-css-in-js-over-global-css-styles-unless-they-are-truly-global"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>Local JS styles have better “deleteability”.</p>
+<p>❌ Bad</p>
+<pre><code class="language-scss"><span class="hljs-selector-class">.header-col</span> {
+  <span class="hljs-attribute">text-align</span>: right <span class="hljs-meta">!important</span>;
+  <span class="hljs-attribute">word-break</span>: normal <span class="hljs-meta">!important</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#73fbe0</span> <span class="hljs-meta">!important</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">20%</span>;
+}
+</code></pre>
+<p>✅ Good</p>
+<pre><code class="language-jsx"><span class="hljs-keyword">import</span> { styled } <span class="hljs-keyword">from</span> <span class="hljs-string">"onefx/lib/styletron-react"</span>;
+<span class="hljs-keyword">const</span> Td = styled(<span class="hljs-string">"div"</span>, {
+  <span class="hljs-string">"textAlign"</span>:<span class="hljs-string">"right !important"</span>,
+  <span class="hljs-string">"wordBreak"</span>:<span class="hljs-string">"normal !important"</span>,
+  <span class="hljs-string">"color"</span>:<span class="hljs-string">"#73fbe0 !important"</span>,
+  <span class="hljs-string">"width"</span>:<span class="hljs-string">"20%"</span>
+})
+</code></pre>
+<h3 id="dry-dont-repeat-yourself">DRY: don’t repeat yourself <a class="markdownIt-Anchor" href="#dry-dont-repeat-yourself"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<h3 id="avoid-simple-copy-and-paste-prefer-using-libraries-directly-understanding-the-code-and-remove-unused-places">Avoid simple copy-and-paste. Prefer using libraries directly understanding the code and remove unused places. <a class="markdownIt-Anchor" href="#avoid-simple-copy-and-paste-prefer-using-libraries-directly-understanding-the-code-and-remove-unused-places"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<h3 id="avoid-unreasonable-comments-update-or-remove-confusing-comments">Avoid unreasonable comments. Update or remove confusing comments. <a class="markdownIt-Anchor" href="#avoid-unreasonable-comments-update-or-remove-confusing-comments"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<h2 id="use-consistent-project-structure">Use Consistent Project Structure <a class="markdownIt-Anchor" href="#use-consistent-project-structure"><span class="markdownIt-Link-Anchor"></span></a></h2>
+<h3 id="1-use-indexjs-for-exporting-the-main-component">1. Use <code>index.js</code> for exporting the main component. <a class="markdownIt-Anchor" href="#1-use-indexjs-for-exporting-the-main-component"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>The <code>index.js</code> should always export the main component. This file should also be the <code>main</code> entry in the <code>package.json</code>.</p>
+<h3 id="2-use-lowercase-kebab-case-filenames">2. Use lowercase kebab-case filenames <a class="markdownIt-Anchor" href="#2-use-lowercase-kebab-case-filenames"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>❌ Bad</p>
+<pre><code class="language-txt">MyAwesomeComponent.js
+My-Awesome-Component.js
+my_awesome_component.js
+</code></pre>
+<p>✅ Good</p>
+<pre><code class="language-txt">my-awesome-component.js
+</code></pre>
+<h3 id="3-prefer-named-exports-over-default-exports">3. Prefer named exports over default exports <a class="markdownIt-Anchor" href="#3-prefer-named-exports-over-default-exports"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>❌ Bad</p>
+<p><code>export default function() {}</code></p>
+<p>✅ Good</p>
+<pre><code class="language-jsx"><span class="hljs-comment">// exports a function declared earlier</span>
+<span class="hljs-keyword">export</span> { myFunction };
+<span class="hljs-comment">// exports a constant</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> foo = <span class="hljs-string">"bar"</span>;
+</code></pre>
+<h2 id="effective-refactoring">Effective refactoring <a class="markdownIt-Anchor" href="#effective-refactoring"><span class="markdownIt-Link-Anchor"></span></a></h2>
+<h3 id="adopt-semantic-version">adopt semantic version <a class="markdownIt-Anchor" href="#adopt-semantic-version"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<h3 id="never-introduce-breaking-change-to-non-major-versions">never introduce breaking change to non-major versions <a class="markdownIt-Anchor" href="#never-introduce-breaking-change-to-non-major-versions"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>two-legged change</p>
+<h2 id="avoid-bikeshedding">Avoid Bikeshedding <a class="markdownIt-Anchor" href="#avoid-bikeshedding"><span class="markdownIt-Link-Anchor"></span></a></h2>
+<p>Let styles be consistent. Let linters lint.</p>
+<h3 id="prefer-px-over-pt-rem">Prefer <code>px</code> over <code>pt</code>, <code>rem</code>. <a class="markdownIt-Anchor" href="#prefer-px-over-pt-rem"><span class="markdownIt-Link-Anchor"></span></a></h3>
+<p>Use <code>px</code>.</p>
+<ul>
+<li>Avoid using <code>pt</code>.</li>
+<li>Avoid using <code>rem</code>. In most cases, users want to see more contents instead of larger fonts with larger screens.</li>
+</ul>
+<h1 id="ux-design-principles">UX Design Principles <a class="markdownIt-Anchor" href="#ux-design-principles"><span class="markdownIt-Link-Anchor"></span></a></h1>
+<ul>
+<li>Empathy / Perspective-taking is the most important.</li>
+<li>Keep elements consistent.</li>
+<li>Insist on the Highest Standards.</li>
+<li>Detail-oriented
+<ul>
+<li>Check i18n.</li>
+<li>Check accessibility.</li>
+</ul>
+</li>
+</ul>
+</div></article></div><div class="_ai _bt _aj _ak _c1 _b1 _bv _bw _al _c6 _bx _c7 _by"><nav style="max-width:300px;padding:8px" class="toc toc-right js-toc relative z-1 transition--300 absolute pa4 top-bar-fixed-top"><div class="js-toc"></div></nav></div></div></div></div></div></div></div><div class="_at _av _aw _ax _ay _az _b0 _ai _aj _al _ak _c8 _c9 _ca _cb _ap"><div class="_ai _bt _aj _ak _c1 _b1 _bv _bw _al _bz _bx _by">Copyright © 2020</div><div><div>Built with <span style="font-size: 12px; color: #F27788;">♥</span> in San Francisco</div> <a target="_blank" rel="noopener noreferrer" href="https://onefx.js.org"><img alt="built with onefx" style="height:20px" src="/built-with-onefx.svg"/></a></div></div></div></div>
+    <script type="text/javascript" crossorigin="" src="/main-10d706f9cbf41f3bafd0.js"></script>
+  </body>
+</html>
