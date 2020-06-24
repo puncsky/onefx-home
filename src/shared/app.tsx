@@ -1,7 +1,7 @@
-import { styled } from "onefx/lib/styletron-react";
-import React, { Component } from "react";
 import { Switch } from "onefx/lib/react-router";
 import { Route } from "onefx/lib/react-router-dom";
+import { styled } from "onefx/lib/styletron-react";
+import React, { Component } from "react";
 import { Footer, FOOTER_ABOVE } from "./common/footer";
 // @ts-ignore
 import initGoogleAnalytics from "./common/google-analytics";

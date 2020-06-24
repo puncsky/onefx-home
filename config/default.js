@@ -48,7 +48,11 @@ module.exports = {
       "https://www.slideshare.net/",
       "https://checkout.stripe.com/"
     ],
-    "connect-src": ["self", "https://checkout.stripe.com/api/"],
+    "connect-src": [
+      "self",
+      "https://checkout.stripe.com/api/",
+      "https://tianpan.co/api-gateway/"
+    ],
     "child-src": ["self"],
     "font-src": [
       "self",
@@ -69,5 +73,6 @@ module.exports = {
       "https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"
     ]
   },
-  apiGatewayUrl: "http://localhost:4009/api-gateway/"
+  apiGatewayUrl:
+    process.env.API_GATEWAY_URL || "http://localhost:4009/api-gateway/"
 };

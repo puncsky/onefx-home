@@ -1,8 +1,8 @@
 // @ts-ignore
+import { Link } from "onefx/lib/react-router-dom";
 import { styled } from "onefx/lib/styletron-react";
 import { Component } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
-import { Link } from "onefx/lib/react-router-dom";
 
 // @ts-ignore
 import { assetURL } from "onefx/lib/asset-url";

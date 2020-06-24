@@ -6,11 +6,11 @@ import Layout from "antd/lib/layout";
 import { assetURL } from "onefx/lib/asset-url";
 // @ts-ignore
 import { t } from "onefx/lib/iso-i18n";
+import { withRouter } from "onefx/lib/react-router";
 // @ts-ignore
 import { styled } from "onefx/lib/styletron-react";
 import React from "react";
 import { PureComponent } from "react";
-import { withRouter } from "onefx/lib/react-router";
 import { CommonMargin } from "../common/common-margin";
 import { Flex } from "../common/flex";
 import { colors } from "../common/styles/style-color";
